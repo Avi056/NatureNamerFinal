@@ -1,0 +1,14 @@
+{
+    "name": "Identifinder",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "This extension reads in an image of a plant, then identifies and describes the plant, including if it is harmful or a invasive type of plant",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab","tabs","http://*/*", "https://*/*","https://*/*/*","nativeMessaging"],
+    "content_scripts": [{
+        "matches":["http://*/*", "https://*/*"],
+        "js": ["script.js","jquery.js"]
+      }]
+}
